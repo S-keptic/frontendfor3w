@@ -1,72 +1,120 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  background-color: #f4f4f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333;
 }
 
-/* Form Styles */
 .form-container, .login-container, .dashboard-container {
   background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 500px;
+  margin: 20px;
+  transition: all 0.3s ease;
+}
+
+.form-container:hover, .login-container:hover, .dashboard-container:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .input-group label {
-  font-weight: bold;
+  font-weight: 600;
+  color: #555;
+  font-size: 14px;
 }
 
 .input-group input {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
+button:focus {
+  outline: none;
+}
+
 .dashboard-container .submission {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 15px;
-  margin-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .images img {
-  margin-right: 10px;
-  border-radius: 5px;
+  max-width: 100px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 12px;
 }
 
 .login-container .input-group input {
-  padding: 10px;
+  padding: 12px;
 }
 
 .login-container button {
   background-color: #28a745;
   font-size: 18px;
+}
+
+.login-container button:hover {
+  background-color: #218838;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+  .form-container, .login-container, .dashboard-container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
 }
