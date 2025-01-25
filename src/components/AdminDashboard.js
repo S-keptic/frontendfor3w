@@ -7,7 +7,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchSubmissions = async () => {
       try {
-        const token = localStorage.getItem("adminToken"); // Assuming you're storing the token in localStorage
+        const token = localStorage.getItem("adminToken");
         const response = await axios.get("https://backendfor3w.onrender.com/api/users/submissions", {
           headers: {
             Authorization: `Bearer ${token}`,
